@@ -1,0 +1,25 @@
+--------------------------------------------------------------------------
+Open MPI tried to fork a new process via the "execve" system call but
+failed.  Open MPI checks many things before attempting to launch a
+child process, but nothing is perfect. This error may be indicative
+of another problem on the target host, or even something as silly as
+having specified a directory for your application. Your job will now
+abort.
+
+  Local host:        cn01
+  Working dir:       /home/haditya/MPI
+  Application name:  ./
+  Error:             Permission denied
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun was unable to start the specified application as it encountered an
+error:
+
+Error code: 1
+Error name: (null)
+Node: cn01
+
+when attempting to start process rank 0.
+--------------------------------------------------------------------------
+[cn01:02993] 7 more processes have sent help message help-orte-odls-default.txt / execve error
+[cn01:02993] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
