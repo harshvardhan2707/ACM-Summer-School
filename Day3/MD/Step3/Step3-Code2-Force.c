@@ -173,7 +173,7 @@ int main(int argc, char *argv[]){
 		  r = sqrt(rsq);
 
 		  if(rsq <rcsq){ 
-		      Uch += 1.0;
+		      Uch += 4*eps*(pow((1/r),12)-pow((1/r),6));
 		      neigpar += 1;
 		  }
 	       }
@@ -203,9 +203,9 @@ int main(int argc, char *argv[]){
 		  r = sqrt(rsq);
 
 		  if(rsq <rcsq){ 
-                    Forcexlj = 1.0;
-		    Forceylj = 1.0;
-		    Forcezlj = 1.0;
+                    Forcexlj = (48.0/r*r)*(pow((1/r),12)-pow((1/(2*r)),6))*xij;
+		    Forceylj = (48.0/r*r)*(pow((1/r),12)-pow((1/(2*r)),6))*yij;
+		    Forcezlj = (48.0/r*r)*(pow((1/r),12)-pow((1/(2*r)),6))*zij;
 		       
 		    Fxparlj = Fxparlj + Forcexlj;
 		    Fyparlj = Fyparlj + Forceylj;
