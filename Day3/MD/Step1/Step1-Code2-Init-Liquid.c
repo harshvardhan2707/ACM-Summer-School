@@ -14,7 +14,8 @@ int main()
 
 	//Initialize constant
 	lx = 10.0;
-	n = 1331;
+	n = 600;
+
 	mindist = 0.9;
         mindistsq = mindist*mindist;
           
@@ -45,7 +46,7 @@ int main()
                 y[i] = ytmp;
                 z[i] = ztmp;
              }
-             fprintf( stderr, "Atom %d Inserted\n", i );
+             //fprintf( stderr, "Atom %d Inserted\n", i );
           }
 
           //SHIFTING COM TO ORIGIN
@@ -54,7 +55,7 @@ int main()
              y[i] = y[i] - lx*0.5;
              z[i] = z[i] - lx*0.5;
           }
-	  fprintf( stderr, "CONFIGURATION SHIFED TO ORIGIN\n" );
+	  //fprintf( stderr, "CONFIGURATION SHIFED TO ORIGIN\n" );
 
 	  printf("%d\n\n",n);
   	  for(i=1;i<=n;i++){

@@ -24,8 +24,9 @@ int main (void)
 	//Initialize velocities
 	for(i=1; i<=n; i++){
            vx[i] = gsl_ran_gaussian(r, sigma) + 0.0; //GAUSSIAN WITH SD sigma AND MEAN 0.0
-	   vy[i]=gsl_ran_gau
-     	   printf("%f\n", u);
+	   vy[i] = gsl_ran_gaussian(r,sigma)+0.0;
+     	   vz[i] = gsl_ran_gaussian(r,sigma)+0.0;
+	   printf("%f %f %f are the velocities\n", vx[i],vy[i],vz[i]);
     	}
   
 	gsl_rng_free (r);
